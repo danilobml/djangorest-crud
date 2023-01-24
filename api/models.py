@@ -11,7 +11,7 @@ class Location(models.Model):
 class Item(models.Model):
     itemName = models.CharField(max_length=100)
     dateAdded = models.DateField(auto_now_add=True)
-    itemLocation = models.ForeignKey(on_delete=models.CASCADE())
+    itemLocation = models.ForeignKey(Location, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.itemName
