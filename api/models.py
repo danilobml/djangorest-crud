@@ -5,7 +5,7 @@ class Location(models.Model):
     locationName = models.CharField(max_length=100, unique=True)
 
     def __str__(self):
-        return self.location_name
+        return self.locationName
 
 
 class Item(models.Model):
